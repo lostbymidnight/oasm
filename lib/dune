@@ -1,0 +1,3 @@
+(library
+ (name oasm)
+ (public_name oasm))

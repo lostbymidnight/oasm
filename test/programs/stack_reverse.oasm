@@ -1,0 +1,20 @@
+    SET R0, 1
+LOOP
+    PUSH R0
+    INC R0
+    COMPARE R0, 6
+    IF_EQUAL
+        BREAK
+    END
+END
+    SET R1, 0
+LOOP
+    POP R2
+    WRITE R1, R2
+    INC R1
+    COMPARE R1, 5
+    IF_EQUAL
+        BREAK
+    END
+END
+    HALT

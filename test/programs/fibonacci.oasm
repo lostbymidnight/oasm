@@ -1,0 +1,14 @@
+    SET R0, 0
+    SET R1, 1
+    SET R2, 10
+LOOP
+    ADD R3, R0, R1
+    COPY R0, R1
+    COPY R1, R3
+    DEC R2
+    COMPARE R2, 0
+    IF_EQUAL
+        BREAK
+    END
+END
+    HALT

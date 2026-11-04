@@ -1,0 +1,11 @@
+    SET R0, 1
+    SET R1, 0
+LOOP
+    LSHIFT R0, R0
+    INC R1
+    COMPARE R0, 0
+    IF_EQUAL
+        BREAK
+    END
+END
+    HALT

@@ -1,0 +1,24 @@
+    SET R0, 2
+LOOP
+    READ R1, R0
+    COMPARE R1, 0
+    IF_EQUAL
+        INC R6
+        ADD R2, R0, R0
+        LOOP
+            COMPARE R2, 31
+            IF_GREATER_EQUAL
+                BREAK
+            END
+            SET R3, 1
+            WRITE R2, R3
+            ADD R2, R2, R0
+        END
+    END
+    INC R0
+    COMPARE R0, 31
+    IF_EQUAL
+        BREAK
+    END
+END
+    HALT

@@ -1,0 +1,11 @@
+    SET R0, 1
+    SET R1, 5
+LOOP
+    MUL R0, R0, R1
+    DEC R1
+    COMPARE R1, 0
+    IF_EQUAL
+        BREAK
+    END
+END
+    HALT

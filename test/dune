@@ -1,0 +1,10 @@
+(test
+ (name test_oasm)
+ (libraries oasm)
+ (deps
+  (glob_files programs/*.oasm)))
+
+(cram
+ (deps
+  %{bin:oasm}
+  (glob_files programs/*.oasm)))

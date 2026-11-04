@@ -1,0 +1,22 @@
+    SET R0, 7
+    SET R1, 0
+    SET R2, 2
+    SET R3, 3
+LOOP
+    COMPARE R0, 1
+    IF_EQUAL
+        BREAK
+    END
+    MOD R4, R0, R2
+    COMPARE R4, 0
+    IF_EQUAL
+        DIV R0, R0, R2
+    END
+    COMPARE R4, 0
+    IF_NOT_EQUAL
+        MUL R0, R0, R3
+        INC R0
+    END
+    INC R1
+END
+    HALT

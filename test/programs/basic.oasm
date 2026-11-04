@@ -1,0 +1,8 @@
+SET R0, 42
+SET R1, 10
+
+PASS
+
+ADD R2, R0, R1
+
+HALT

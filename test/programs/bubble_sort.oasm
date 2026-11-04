@@ -1,0 +1,44 @@
+    SET R0, 0
+    SET R1, 5
+    WRITE R0, R1
+    SET R0, 1
+    SET R1, 2
+    WRITE R0, R1
+    SET R0, 2
+    SET R1, 9
+    WRITE R0, R1
+    SET R0, 3
+    SET R1, 1
+    WRITE R0, R1
+    SET R0, 4
+    SET R1, 7
+    WRITE R0, R1
+
+    SET R6, 4
+LOOP
+    SET R0, 0
+    COPY R5, R6
+    LOOP
+        READ R1, R0
+        COPY R2, R0
+        INC R2
+        READ R3, R2
+        COMPARE R1, R3
+        IF_GREATER
+            WRITE R0, R3
+            WRITE R2, R1
+        END
+        INC R0
+        DEC R5
+        COMPARE R5, 0
+        IF_EQUAL
+            BREAK
+        END
+    END
+    DEC R6
+    COMPARE R6, 0
+    IF_EQUAL
+        BREAK
+    END
+END
+    HALT

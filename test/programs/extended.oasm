@@ -1,0 +1,21 @@
+    SET R0, 3
+    SET R1, 0
+LOOP
+    ADD R1, R1, R0
+    DEC R0
+    COMPARE R0, 0
+    IF_EQUAL
+        BREAK
+    END
+END
+
+    SET R2, 200
+    WRITE R2, R1
+    READ R3, R2
+
+    CALL double
+    HALT
+
+double:
+    ADD R3, R3, R3
+    RETURN

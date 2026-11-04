@@ -1,0 +1,24 @@
+start:
+    SET R0, 10
+    SET R1, 20
+    ADD R2, R0, R1
+
+    SET R3, 30
+    ADD R3, R2, R3
+
+    SET R4, 255
+    SET R5, 1
+    ADD R4, R4, R5
+
+    SET R6, 128
+    SET R7, 127
+    ADD R7, R6, R7
+
+    JUMP finish
+
+    SET R0, 99
+    SET R1, 99
+
+finish:
+    PASS
+    HALT

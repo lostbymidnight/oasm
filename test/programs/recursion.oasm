@@ -1,0 +1,14 @@
+    SET R0, 5
+    SET R1, 0
+    CALL sum
+    HALT
+
+sum:
+    COMPARE R0, 0
+    IF_EQUAL
+        RETURN
+    END
+    ADD R1, R1, R0
+    DEC R0
+    CALL sum
+    RETURN
